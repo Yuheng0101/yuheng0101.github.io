@@ -1,0 +1,170 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(189, 195, 199), rgb(44, 62, 80));
+}
+
+.card {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    transition: .5s all;
+}
+
+.card .user {
+    position: relative;
+    width: 320px;
+    min-height: 150px;
+    background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 60px 40px 30px;
+    transition: .5s all;
+}
+
+.card .user .img-box {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 10;
+}
+
+.card .user.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .user .content {
+    position: relative;
+    text-align: center;
+}
+
+.card .user .content h2 {
+    font-size: 1.5em;
+    margin: .2em 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+.card .user .content h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #fff;
+}
+
+.card .user .toggle {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    padding: 5px 15px;
+    background-color: #fff;
+    border-radius: 30px;
+    transform: translateY(50%);
+    border: 6px solid #000;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.card.active .user .toggle {
+    background-color: red;
+    color: #fff;
+}
+
+.card .user .toggle::before {
+    content: "Hi, there!";
+}
+
+.card.active .user .toggle::before {
+    content: "Bye bye!";
+}
+
+.card .contact {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: .5s all;
+}
+
+.card.active .contact {
+    height: 375px;
+}
+
+.card .contact>li {
+    width: 100%;
+    min-height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    transition: .3s all;
+    opacity: 0;
+    transform: scale(0);
+    padding: 10px 30px;
+}
+
+.card.active .contact>li {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: calc(.3s * var(--i));
+}
+
+.card.active .contact:hover>li {
+    opacity: .2;
+    filter: blur(2px);
+    transition-delay: 0s;
+}
+
+.card.active .contact>li:hover {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.card .contact>li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .contact>li a .icon-box {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: var(--cir);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .contact>li a .icon-box i {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.card .contact>li a p {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #666;
+}

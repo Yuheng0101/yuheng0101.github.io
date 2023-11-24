@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>𝘠𝘶𝘩𝘦𝘯𝘨</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="card">
+            <div class="user">
+                <div class="img-box">
+                    <img src="https://avatars.githubusercontent.com/u/50571734?s=100&u=82d49ceecfc580df6eb42a17ce8dc6fd4a01b356&v=4" />
+                </div>
+                <div class="content">
+                    <h2>永远保持一颗学习的心</h2>
+                    <h1>Always keep a heart of learning</h1>
+                </div>
+                <div class="toggle"></div>
+            </div>
+            <ul class="contact">
+                <li style="--cir: #c71610; --i: 0">
+                    <a href="https://github.com/yuheng0101" target="_blank">
+                        <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+                        <p>GitHub仓库地址</p>
+                    </a>
+                </li>
+                <li style="--cir: #171515; --i: 1">
+                    <a href="https://t.me/onz3v" target="_blank">
+                        <div class="icon-box"><i class="fa-brands fa-telegram"></i></div>
+                        <p>私人Telegram</p>
+                    </a>
+                </li>
+                <li style="--cir: #0a66c2; --i: 2">
+                    <a href="https://t.me/yqc_777" target="_blank">
+                        <div class="icon-box"><i class="fa-solid fa-user"></i></div>
+                        <p>交流群组</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            let toggle = document.querySelector('.toggle')
+            let card = document.querySelector('.card')
+            toggle.onclick = () => {
+                card.classList.toggle('active')
+            }
+        </script>
+    </body>
+</html>
