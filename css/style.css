@@ -122,6 +122,7 @@ body {
     opacity: 0;
     transform: scale(0);
     padding: 10px 30px;
+    margin-top:10px;
 }
 
 .card.active .contact>li {
